@@ -16,3 +16,12 @@ def about(request):
     now = datetime.datetime.now()
     context = {'like':'Django 很讚','now':now} 
     return render(request,'main/about.html',context)
+
+def book(request):
+    '''
+    Render the book pages
+    '''
+    now = datetime.datetime.now()
+    context = {'like':'Django 很讚','now':now} 
+    return render(request,'main/book.html',context)
+

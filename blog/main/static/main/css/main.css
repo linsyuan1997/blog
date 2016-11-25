@@ -8,7 +8,6 @@ body {
   background-size: cover;
 }
 
-/* Menu */
 ul#menu {
   margin-bottom: 10px;
   text-align: light;
@@ -16,4 +15,22 @@ ul#menu {
 ul#menu li {
   display: inline-block;
   margin-left: 10px;
+}
+/* Button */
+.btn {
+color: black;
+font-size: 0.8em;
+padding: 3px 7px;
+text-decoration: none;
+border: thin solid gray;
+background: linear-gradient(#f7f7f7, #dedede);
+}
+
+/* Messages */
+.success {
+  color: blue;
+}
+
+.error {
+  color: red;
 }

@@ -11,9 +11,9 @@ def article(request):
     articles = Article.objects.all()
     itemsList = []
     for article in articles:
-       items = [article]
-       items.extend(list(Comment.objects.filter(article=article)))
-       itemsList.append(items)
+        items = [article]
+        items.extend(list(Comment.objects.filter(article=article)))
+        itemsList.append(items)
     context = {'itemsList':itemsList}
     
     return render(request, 'article/article.html', context)
@@ -28,4 +28,18 @@ def articleCreate(request):
     template = 'article/articleCreate.html'
     if request.method == 'GET':
         return render(request, template, {'articleForm':ArticleForm()})
+    
+    # POST
+    articleForm = ArticleForm(request.POST)
+    if not articleForm.is_valid():
+        return render(request, template, {'articleForm':articleForm})
+    articleForm.save()
+    messages.success(request, '文章已新增了')
+    return redirect('article:article')
+    # Or try this at the last line: return article(request)
+    
+    
+    
+    
+    
     

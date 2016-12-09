@@ -1,5 +1,5 @@
 from django.contrib import admin
-from book.models import book, Comment
+from book.models import book
 
 class CommentModelAdmin(admin.ModelAdmin):
     list_display = ['book', 'content']
@@ -9,12 +9,6 @@ class CommentModelAdmin(admin.ModelAdmin):
     list_editable = ['content']
     
     
-    class Meta:
-        model = Comment
 
-
-
-
-admin.site.register(book)
-admin.site.register(Comment)
+       
 

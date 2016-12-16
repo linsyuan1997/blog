@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <html>
 <head>
-<title>部落格</title>
+<title>美食秀</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 <link rel="stylesheet" href="{% static 'article/css/article.css' %}">
@@ -10,14 +10,20 @@
 </head>
 <body>
 {% include 'main/menu.html' %}
-<h1>歡迎來到我的部落格</h1>
-<a class="btn" href="{% url 'article:articleCreate' %}">新增文章</a>
-<br>
+{% include 'main/messages.html' %}
+<h1>食在好吃歐～</h1>
+{% include 'article/searchForm.html' %}
+<p class="inlineBlock"><a class="btn" href="{% url 'article:articleCreate' %}">新增美食</a></p>
+<br><br><hr>
 {% include 'main/messages.html' %}
 {% for items in itemsList %}
 {% for item in items %}
 {% if forloop.first %}
- <h3>{{ item.title }}</h3>
+ <h3><a href="{% url 'article:articleRead' item.id %}">{{ item.title }}</a></h3>
+ <form class="inlineBlock" method="post" action="{% url 'article:articleDelete' item.id %}">
+   {% csrf_token %}
+   <input class="btn" type="submit" value="刪除">
+</form>
  <p>發表時間：{{ item.pubDateTime|date:'Y-m-d H:i' }}</p>
  <div class=articleContent>{{ item.content|linebreaks|truncatechars_html:30 }}</div>
  <p>讚：{{ item.likes }}</p>

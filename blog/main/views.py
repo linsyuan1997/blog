@@ -6,7 +6,7 @@ def main(request):
     Render the main pages
     '''
     now = datetime.datetime.now()
-    context = {'like':'Django 很讚','now':now} 
+    context = {'like':' 我很讚','now':now} 
     return render(request,'main/main.html',context)
 
 def about(request):
@@ -14,7 +14,7 @@ def about(request):
     Render the about pages
     '''
     now = datetime.datetime.now()
-    context = {'like':'Django 很讚','now':now} 
+    context = {'like':'你很讚','now':now} 
     return render(request,'main/about.html',context)
 
 def book(request):

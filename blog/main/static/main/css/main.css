@@ -1,18 +1,19 @@
-html, body {
+html, body,  {
   margin: 0;
   height: 100%;
 }
 body {
   padding: 250px;
-  background: url(../img/cyut.jpg) no-repeat top center ;  
-  background-size: 55%;   
-  
+  background: url(../img/cyut.jpg) no-repeat top center  ; 
+  background-size: 55%;        
 }
 
 ul#menu {
   margin-bottom: 30px;
   text-align: center;
+   
 }
+
 ul#menu li {
   display: inline-block;
   margin-left: 40px;

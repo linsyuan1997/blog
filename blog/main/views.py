@@ -25,3 +25,5 @@ def book(request):
     context = {'like':'Django 很讚','now':now} 
     return render(request,'main/book.html',context)
 
+
+

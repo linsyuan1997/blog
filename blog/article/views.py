@@ -103,6 +103,17 @@ def articleSearch(request):
     return render(request, 'article/articleSearch.html', context)
     # Or try this at the last line: return article(request)
     
+def articleSearchh(request):
+    '''
+    Search for articles:
+        1. Get the "searchTerm" from the HTML page
+        2. Use "searchTerm" for filtering
+    '''
+    searchTerm = request.GET.get('searchTerm')
+    articles = Article.objects.filter()
+    context = {'articles':articles, 'searchTerm':searchTerm}
+    return render(request, 'article/articleSearch.html', context)
+    # Or try this at the last line: return article(request)
     
     
     

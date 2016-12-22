@@ -4,6 +4,10 @@
   <li><a href="{% url 'main:about' %}">吉峰東路地圖</a></li>
   <li><a href="{% url 'article:article' %}">朝陽山下美食</a></li>
   <li><a href="{% url 'book:book' %}">意見回饋</a></li>    
+  
+  <form class="inlineBlock" action="{% url 'article:articleSearchh' %}">  
+  <input class="btn" type="submit" value="朝楊山下美食">
+</form>
   <hr>
 </ul>
 

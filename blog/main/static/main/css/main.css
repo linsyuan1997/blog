@@ -25,7 +25,7 @@ font-size: 0.8em;
 padding: 3px 7px;
 text-decoration: none;
 border: thin solid gray;
-background: linear-gradient(#f7f7f7, #dedede);
+background: linear-gradient(#f7f7f7, #4bfce7);
 }
 
 /* Messages */
@@ -55,16 +55,17 @@ background: linear-gradient(#f7f7f7, #dedede);
 
 .table td {
   color: #222222;
-  background-color: #d0d0d0;
+  background-color: #e8adad;
   padding: 12px 0 12px 10px;
 }
 
 .table-striped tr:nth-child(even) td {
+  
   background-color: #eeeeee;
 }
 
 .table-hover tr:hover td {
-  background-color: #cccccc;
+  background-color: #abed28;
 }
 
 /* Misc */
